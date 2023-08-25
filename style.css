@@ -1,0 +1,88 @@
+html,
+body {
+  position: relative;
+  height: 100%;
+}
+
+body {
+  background: #eee;
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  color: #000;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #fff;
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  color: #000;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  position: relative;
+  height: 100%;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper {
+  width: 377.379px;
+  height: 568.341px;
+  border-radius: 15px;
+  background: url(<path-to-image>), lightgray 50% / cover no-repeat;
+  box-shadow: 24px 0px 44px 0px rgba(0, 0, 0, 0.33);
+}
+
+.swiper-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 18px;
+  font-size: 22px;
+  font-weight: bold;
+  color: #fff;
+}
+
+/* btn for slide change */
+.btn-container {
+  margin: 28px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 47px;
+}
+
+.btn {
+  height: 42px;
+  width: 42px;
+  color: #131313;
+  border: 1px solid #131313;
+  border-radius: 50%;
+  transition: all;
+  transition-duration: 1000ms;
+  font-size: 20px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: #131313;
+  color: white;
+}
+
+img {
+  height: 100%;
+  width: 100%;
+}
