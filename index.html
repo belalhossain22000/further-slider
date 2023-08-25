@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Swiper demo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+
+    <!-- Demo styles -->
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        html,
+        body {
+            position: relative;
+            height: 100%;
+        }
+
+        body {
+            background: #eee;
+            font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+            font-size: 14px;
+            color: #000;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background: #fff;
+            font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+            font-size: 14px;
+            color: #000;
+            margin: 0;
+            padding: 0;
+        }
+
+        html,
+        body {
+            position: relative;
+            height: 100%;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .swiper {
+            width: 377.379px;
+            height: 568.341px;
+            border-radius: 15px;
+            background: url(<path-to-image>), lightgray 50% / cover no-repeat;
+            box-shadow: 24px 0px 44px 0px rgba(0, 0, 0, 0.33);
+        }
+
+        .swiper-slide {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 18px;
+            font-size: 22px;
+            font-weight: bold;
+            color: #fff;
+        }
+
+        /* .swiper-slide:nth-child(1n) {
+            background-color: rgb(206, 17, 17);
+        }
+
+        .swiper-slide:nth-child(2n) {
+            background-color: rgb(0, 140, 255);
+        }
+
+        .swiper-slide:nth-child(3n) {
+            background-color: rgb(10, 184, 111);
+        }
+
+        .swiper-slide:nth-child(4n) {
+            background-color: rgb(211, 122, 7);
+        } */
+
+        /* .swiper-slide:nth-child(5n) {
+            background-color: rgb(118, 163, 12);
+        }
+
+        .swiper-slide:nth-child(6n) {
+            background-color: rgb(180, 10, 47);
+        }
+
+        .swiper-slide:nth-child(7n) {
+            background-color: rgb(35, 99, 19);
+        }
+
+        .swiper-slide:nth-child(8n) {
+            background-color: rgb(0, 68, 255);
+        }
+
+        .swiper-slide:nth-child(9n) {
+            background-color: rgb(218, 12, 218);
+        }
+
+        .swiper-slide:nth-child(10n) {
+            background-color: rgb(54, 94, 77);
+        } */
+
+        /* btn for slide change */
+        .btn-container {
+            margin: 28px 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 47px;
+        }
+
+        .btn {
+            height: 42px;
+            width: 42px;
+            color: #131313;
+            border: 1px solid #131313;
+            border-radius: 50%;
+            transition: all;
+            transition-duration: 1000ms;
+            font-size: 20px;
+            font-weight: bold;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+
+        }
+
+        .btn:hover {
+            background: #131313;
+            color: white;
+        }
+
+        img {
+            height: 100%;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Swiper -->
+
+    <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="./image/image 1.png" alt=""></div>
+            <div class="swiper-slide"><img src="./image/image 2.png" alt=""></div>
+            <div class="swiper-slide"><img src="./image/image 3.png" alt=""></div>
+            <div class="swiper-slide"><img src="./image/image 4.png" alt=""></div>
+            <div class="swiper-slide"><img src="./image/image 1.png" alt=""></div>
+            <div class="swiper-slide"><img src="./image/image 2.png" alt=""></div>
+            <div class="swiper-slide"><img src="./image/image 3.png" alt=""></div>
+            <div class="swiper-slide"><img src="./image/image 4.png" alt=""></div>
+            <div class="swiper-slide"><img src="./image/image 1.png" alt=""></div>
+        </div>
+        <div class="btn-container">
+            <button id="prevBtn" class="btn"><i class="fa-solid fa-arrow-left"></i></button>
+            <button id="nextBtn" class="btn"><i class="fa-solid fa-arrow-right"></i></button>
+        </div>
+    </div>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            effect: "cards",
+            speed: 700,  
+            grabCursor: true,
+        });
+        // Get the button elements
+        var prevButton = document.getElementById('prevBtn');
+        var nextButton = document.getElementById('nextBtn');
+
+        // Add click event listeners to the buttons
+        prevButton.addEventListener('click', function () {
+            swiper.slidePrev();
+        });
+
+        nextButton.addEventListener('click', function () {
+            swiper.slideNext();
+        });
+    </script>
+</body>
+
+</html>
